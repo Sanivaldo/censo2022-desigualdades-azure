@@ -19,6 +19,10 @@
 			"type": "string",
 			"defaultValue": "https://sidra.ibge.gov.br/"
 		},
+		"ls_bcb_sgs_http_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.bcb.gov.br/"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -54,6 +58,9 @@
 					},
 					"ls_ibge_sidra_http_properties_typeProperties_url": {
 						"value": "[parameters('ls_ibge_sidra_http_properties_typeProperties_url')]"
+					},
+					"ls_bcb_sgs_http_properties_typeProperties_url": {
+						"value": "[parameters('ls_bcb_sgs_http_properties_typeProperties_url')]"
 					}
 				}
 			},

@@ -14,6 +14,9 @@
 		"ls_ibge_sidra_http_properties_typeProperties_url": {
 			"value": "https://sidra.ibge.gov.br/"
 		},
+		"ls_bcb_sgs_http_properties_typeProperties_url": {
+			"value": "https://api.bcb.gov.br/"
+		},
 		"containerUri": {
 			"value": ""
 		},
