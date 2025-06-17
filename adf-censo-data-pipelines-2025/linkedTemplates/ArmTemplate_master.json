@@ -17,7 +17,7 @@
 		},
 		"bcb_linked_service_http_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://api.bcb.gov.br"
+			"defaultValue": "https://api.bcb.gov.br/dados/serie/"
 		},
 		"containerUri": {
 			"type": "string",
