@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://api.bcb.gov.br/dados/serie/",
+			"url": "https://api.bcb.gov.br/",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
