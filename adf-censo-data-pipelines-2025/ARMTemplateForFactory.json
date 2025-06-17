@@ -47,7 +47,9 @@
 								"type": "JsonSource",
 								"storeSettings": {
 									"type": "HttpReadSettings",
-									"requestMethod": "GET"
+									"requestMethod": "GET",
+									"additionalHeaders": "Key: Accept\nValue: application/json",
+									"requestTimeout": ""
 								},
 								"formatSettings": {
 									"type": "JsonReadSettings"
@@ -69,7 +71,15 @@
 								"referenceName": "ds_bcb_sgs_raw",
 								"type": "DatasetReference",
 								"parameters": {
-									"seriesCode": "@pipeline().parameters.seriesCode"
+									"seriesCode": "@pipeline().parameters.seriesCode",
+									"dataInicial": {
+										"value": "@pipeline().parameters.dataInicial",
+										"type": "Expression"
+									},
+									"dataFinal": {
+										"value": "@pipeline().parameters.dataFinal",
+										"type": "Expression"
+									}
 								}
 							}
 						],
@@ -77,9 +87,7 @@
 							{
 								"referenceName": "ds_adls_bcb_sgs_raw",
 								"type": "DatasetReference",
-								"parameters": {
-									"fileName": "concat('series_', pipeline().parameters.seriesCode, '_', formatDateTime(utcNow(), 'yyyyMMdd'), '.json')"
-								}
+								"parameters": {}
 							}
 						]
 					}
@@ -89,6 +97,12 @@
 				},
 				"parameters": {
 					"seriesCode": {
+						"type": "string"
+					},
+					"dataInicial": {
+						"type": "string"
+					},
+					"dataFinal": {
 						"type": "string"
 					}
 				},
@@ -145,6 +159,12 @@
 				"parameters": {
 					"seriesCode": {
 						"type": "string"
+					},
+					"dataInicial": {
+						"type": "string"
+					},
+					"dataFinal": {
+						"type": "string"
 					}
 				},
 				"annotations": [],
@@ -153,7 +173,7 @@
 					"location": {
 						"type": "HttpServerLocation",
 						"relativeUrl": {
-							"value": "dados/serie/@{dataset().seriesCode}/dados?formato=json",
+							"value": "dados/serie/@{dataset().seriesCode}/dados?formato=json&dataInicial=@{dataset().dataInicial}&dataFinal=@{dataset().dataFinal}\n",
 							"type": "Expression"
 						}
 					}
