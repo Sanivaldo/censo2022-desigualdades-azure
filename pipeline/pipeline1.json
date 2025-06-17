@@ -39,7 +39,10 @@
 				"inputs": [
 					{
 						"referenceName": "ds_bcb_sgs_raw",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"seriesCode": "@pipeline().parameters.seriesCode"
+						}
 					}
 				],
 				"outputs": [
@@ -47,13 +50,17 @@
 						"referenceName": "ds_adls_bcb_sgs_raw",
 						"type": "DatasetReference",
 						"parameters": {
-							"seriesCode": "bcdata.sgs.11",
 							"fileName": "concat('series_', pipeline().parameters.seriesCode, '_', formatDateTime(utcNow(), 'yyyyMMdd'), '.json')"
 						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"seriesCode": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }

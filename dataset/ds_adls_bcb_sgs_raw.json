@@ -6,9 +6,6 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"seriesCode": {
-				"type": "string"
-			},
 			"fileName": {
 				"type": "string",
 				"defaultValue": "concat('series_', pipeline().parameters.seriesCode, '_', formatDateTime(utcNow(), 'yyyyMMdd'), '.json')"

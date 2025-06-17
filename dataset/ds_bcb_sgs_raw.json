@@ -5,11 +5,17 @@
 			"referenceName": "bcb_linked_service_http",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"seriesCode": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation"
+				"type": "HttpServerLocation",
+				"relativeUrl": "dados/serie/@{dataset().seriesCode}/dados?formato=json"
 			}
 		},
 		"schema": {}
