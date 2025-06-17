@@ -58,10 +58,7 @@
 				"outputs": [
 					{
 						"referenceName": "ds_adls_bcb_sgs_raw",
-						"type": "DatasetReference",
-						"parameters": {
-							"fileName": "concat('series_', pipeline().parameters.seriesCode, '_', formatDateTime(utcNow(), 'yyyyMMdd'), '.json')"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
