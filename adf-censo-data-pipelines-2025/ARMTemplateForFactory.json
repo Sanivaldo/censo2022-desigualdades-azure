@@ -96,6 +96,30 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/ls_bcb_sgs_http')]"
 			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_adls_bcb_sgs_raw')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_adls_censo",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Json",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobFSLocation",
+						"folderPath": "banco-central",
+						"fileSystem": "raw"
+					}
+				},
+				"schema": {}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_adls_censo')]"
+			]
 		}
 	]
 }
