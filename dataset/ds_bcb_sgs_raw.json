@@ -8,23 +8,13 @@
 		"parameters": {
 			"seriesCode": {
 				"type": "string"
-			},
-			"dataInicial": {
-				"type": "string"
-			},
-			"dataFinal": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation",
-				"relativeUrl": {
-					"value": "dados/serie/@{dataset().seriesCode}/dados?formato=json&dataInicial=@{dataset().dataInicial}&dataFinal=@{dataset().dataFinal}\n",
-					"type": "Expression"
-				}
+				"type": "HttpServerLocation"
 			}
 		},
 		"schema": {}
