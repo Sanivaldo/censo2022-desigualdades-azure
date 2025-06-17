@@ -4,60 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Engineer - Azure com Dados Públicos</title>
-  <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF; /* mais limpo e profissional que #f9f9f9 */
+    color: #2B2B2B;
+    line-height: 1.6;
+  }
 
-    header {
-      background-color: #0078D4;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
+  header {
+    background-color: #0078D4;
+    color: white;
+    padding: 2.5rem 1rem;
+    text-align: center;
+  }
 
-    header img {
-      height: 50px;
-      vertical-align: middle;
-      margin: 0 0.5rem;
-    }
+  header img {
+    height: 52px;
+    vertical-align: middle;
+    margin: 0 0.5rem;
+  }
 
-    h1 {
-      margin: 0.5rem 0 0;
-      font-size: 2rem;
-    }
+  h1 {
+    margin: 0.5rem 0 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
 
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+  h2 {
+    color: #0078D4;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
 
-    section {
-      margin-bottom: 2rem;
-    }
+  main {
+    max-width: 840px;
+    margin: 2rem auto;
+    padding: 0 1.2rem;
+  }
 
-    a {
-      color: #0078D4;
-      text-decoration: none;
-      font-weight: 600;
-    }
+  section {
+    margin-bottom: 2.5rem;
+    background-color: #F3F9FD; /* seção com fundo leve */
+    padding: 1.5rem;
+    border-radius: 6px;
+  }
 
-    a:hover {
-      text-decoration: underline;
-    }
+  a {
+    color: #005A9E;
+    text-decoration: none;
+    font-weight: 600;
+  }
 
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.875rem;
-      color: #777;
-    }
-  </style>
+  a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #777;
+    border-top: 1px solid #eee;
+    margin-top: 3rem;
+  }
+</style>
+
 </head>
 <body>
   <header>
@@ -66,26 +80,39 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" alt="Azure Logo">
     </div>
     <h1>Engenharia de Dados com Azure</h1>
-    <p>Projeto com foco em ingestão, transformação e visualização de dados públicos</p>
+    <p>Arquitetura em Nuvem de Ponta a Ponta com Dados Públicos Brasileiros</p>
   </header>
 
   <main>
     <section>
       <h2>Sobre o Projeto</h2>
-      <p>Este projeto demonstra uma arquitetura de dados moderna utilizando serviços da Microsoft Azure, incluindo Data Factory, Storage, Databricks e Power BI. O objetivo é processar dados públicos brasileiros com qualidade e gerar insights com valor social.</p>
+      <p>Este projeto implementa uma arquitetura moderna de engenharia de dados no Microsoft Azure, com foco em ingestão, transformação e visualização de dados públicos com valor social. A solução foi construída do zero utilizando Terraform, Data Factory, Azure Data Lake Gen2, Databricks (PySpark), Synapse Analytics e Power BI, aplicando práticas robustas de governança, automação e versionamento.
+
+A pipeline cobre todo o fluxo: da coleta de dados brutos em APIs e repositórios públicos, passando pela modelagem em camadas (bronze, silver, gold), até a disponibilização em dashboards interativos. Todos os códigos foram versionados no GitHub, e as credenciais sensíveis foram protegidas conforme boas práticas.</p>
     </section>
 
-    
     <section>
-      <h2>Sobre Mim</h2>
-      <p>Tenho mais de 5 anos de experiência na área de dados, atuando em projetos de análise e engenharia de dados e BI. Ao longo da minha trajetória, desenvolvi pipelines de dados robustos, modelos analíticos, integrações entre sistemas e dashboards voltados para apoio à decisão estratégica.</p>
-      <p>Possuo certificações oficiais da Microsoft, incluindo:<br>
-      <strong>PL-300</strong>: Power BI Data Analyst Associate<br>
-      <strong>DP-900</strong>: Azure Data Fundamentals<br>
-      (atualmente em preparação para a <strong>DP-600</strong>)</p>
-      <p>Desenvolvi, do zero, arquiteturas completas na plataforma <strong>Microsoft Azure</strong>, integrando serviços como <em>Data Factory, Blob Storage, Azure SQL Database, Databricks (PySpark)</em> e <em>Power BI</em> para gerar valor com dados públicos reais.</p>
-      <p>Minha missão é aplicar tecnologia com propósito — traduzindo dados complexos em soluções que realmente importam.</p>
+      <h2>Fluxo da Arquitetura</h2>
+      <p>Diagrama simplificado do pipeline de dados em nuvem com serviços Azure:</p>
+      <img src="https://raw.githubusercontent.com/Sanivaldo/data-engineer-azure-dados-publicos/main/docs/img/diagrama-fluxo-azure.png" alt="Fluxo Arquitetura Azure" style="width:100%; max-width:800px; display:block; margin: 0 auto; border-radius: 8px;">
     </section>
+    
+<section>
+  <h2>Sobre Mim</h2>
+  <p>Sou profissional com mais de 5 anos de experiência na área de dados, atuando com análise, engenharia de dados e business intelligence. Tenho expertise no desenvolvimento de pipelines de dados de ponta a ponta, modelos analíticos, integrações entre sistemas e soluções orientadas à tomada de decisão.</p>
+
+  <p>Possuo certificações oficiais da Microsoft:<br>
+    <strong>PL-300</strong>: Power BI Data Analyst Associate<br>
+    <strong>DP-900</strong>: Azure Data Fundamentals<br>
+    (em preparação para a <strong>DP-600</strong>: Fabric Analytics Engineer Associate)
+  </p>
+
+  <p>Já projetei arquiteturas completas na <strong>Microsoft Azure</strong>, integrando serviços como <em>Data Factory, Data Lake Storage Gen2, Azure SQL Database, Synapse Analytics, Databricks (PySpark)</em> e <em>Power BI</em>, com foco em escalabilidade, governança e reprodutibilidade via IaC.</p>
+
+  <p>Acredito que dados só geram valor real quando transformados em soluções aplicáveis. Minha missão é aplicar tecnologia com propósito — entregando produtos de dados que apoiam decisões estratégicas e geram impacto positivo.</p>
+</section>
+
+
 
     <section>
       <h2>Repositório no GitHub</h2>
@@ -103,8 +130,24 @@
         <em>Link do dashboard Power BI (em breve)</em>
       </p>
     </section>
+
+     <section>
+      <h2>Stack Técnica</h2>
+      <ul>
+        <li><strong>💻 Linguagens:</strong> Python, SQL, DAX</li>
+        <li><strong>☁️ Cloud:</strong> Microsoft Azure (Data Factory, Data Lake Gen2, Synapse, SQL Database)</li>
+        <li><strong>📈 Business Intelligence:</strong> Power BI</li>
+        <li><strong>🛠️ Infraestrutura:</strong> Terraform (Infraestrutura como Código)</li>
+        <li><strong>📊 Processamento:</strong> Databricks (PySpark), Synapse Spark</li>
+        <li><strong>🔐 Segurança:</strong> RBAC, autenticação com Service Principal, GitHub Secrets</li>
+        <li><strong>📁 Versionamento:</strong> GitHub (repositório com código de IaC, pipelines e notebooks)</li>
+      </ul>
+    </section>
+    
   </main>
 
+
+ 
   <footer>
     &copy; 2025 Samuel Calado. Todos os direitos reservados.
   </footer>

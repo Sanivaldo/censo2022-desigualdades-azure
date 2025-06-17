@@ -1,46 +1,79 @@
-# Data Engineer: Azure com Dados Públicos
+Engenharia de Dados: Azure com Dados Públicos
 
-Este projeto apresenta uma arquitetura de dados desenvolvida sobre a plataforma Microsoft Azure, com o objetivo de processar e analisar dados públicos com relevância social. A solução segue boas práticas de engenharia de dados e foi desenhada com foco em escalabilidade, modularidade e governança.
+Este repositório apresenta uma arquitetura moderna de dados construída com serviços da Microsoft Azure, voltada para ingestão, processamento e análise de dados públicos com relevância social. A solução foi projetada com foco em escalabilidade, modularidade e boas práticas de governança.
 
-## Objetivo
+Objetivo
+Desenvolver uma pipeline completa e automatizada para ingestão e transformação de dados públicos brasileiros, com exposição de resultados analíticos por meio de dashboards interativos no Power BI.
 
-Implementar uma arquitetura moderna de ingestão e processamento de dados públicos brasileiros, com tratamento automatizado e visualização interativa via Power BI, utilizando serviços nativos da Azure e padrões arquiteturais robustos.
+-------------------------------------------------------------------------------------------------------------------
 
-## Arquitetura Técnica
+Arquitetura:
 
-- **Ingestão**: dados públicos estruturados (CSV, JSON) armazenados no Azure Blob Storage.
-- **Orquestração**: pipelines ELT implementados no Azure Data Factory, com triggers parametrizadas.
-- **Transformação**: execução de notebooks PySpark no Azure Databricks, organizados em camadas (bronze, silver, gold).
-- **Armazenamento Relacional**: dados tratados persistidos no Azure SQL Database.
-- **Visualização**: exposição de KPIs e painéis analíticos no Power BI.
-- **Provisionamento (opcional)**: templates ARM/Bicep para automação da infraestrutura.
+Ingestão: arquivos CSV, XLSX e JSON armazenados no Azure Data Lake Storage (camada raw).
 
-## Tecnologias Utilizadas
+Orquestração: pipelines no Azure Data Factory com parametrização e triggers.
 
-- Azure Data Factory
-- Azure Blob Storage
-- Azure Databricks (PySpark)
-- Azure SQL Database
-- Power BI
-- GitHub e GitHub Actions (CI/CD)
-- Infraestrutura como Código (Bicep/ARM)
+Transformação: notebooks PySpark no Azure Databricks, com dados organizados nas camadas bronze, silver e gold.
 
-## Estrutura do Repositório
+Armazenamento relacional: carga dos dados tratados no Azure SQL Database.
 
-/data → Dados organizados por camadas:  
-  /data/raw  
-  /data/bronze  
-  /data/silver  
-  /data/gold  
+Visualização: painéis analíticos criados no Power BI.
 
-/docs → Diagramas, prints do dashboard e documentação complementar  
+Provisionamento: templates de infraestrutura como código utilizando Bicep ou ARM.
 
-/infrastructure → Templates de provisionamento de recursos na Azure (ex: Bicep, ARM, Terraform)  
+-------------------------------------------------------------------------------------------------------------------
 
-/notebooks → Notebooks Databricks com transformações e modelagens em PySpark  
+Tecnologias usadas:
 
-/pipelines → Artefatos do Azure Data Factory (pipelines, datasets, linked services)  
+Azure Data Factory
 
-/scripts → Scripts auxiliares para cargas em lote (batch) ou fluxo contínuo (streaming)  
+Azure Databricks
 
-/README.md → Documento principal com visão geral e instruções do projeto
+Azure Data Lake Gen2
+
+Azure SQL Database
+
+Power BI
+
+GitHub e GitHub Actions
+
+Infraestrutura como Código (Bicep, ARM)
+
+-------------------------------------------------------------------------------------------------------------------
+
+Estrutura do Repositório
+
+bash
+
+Copy
+
+Edit
+
+/data
+
+  /raw           - Dados brutos
+  
+  /bronze        - Dados com ingestão inicial
+  
+  /silver        - Dados limpos e estruturados
+  
+  /gold          - Dados prontos para análise
+  
+
+/docs            - Documentação e diagramas
+
+/infrastructure  - Templates de IaC para provisionamento
+
+/notebooks       - Notebooks PySpark utilizados no Databricks
+
+/pipelines       - Artefatos JSON exportados do Azure Data Factory
+
+/scripts         - Scripts auxiliares para ingestão e processamento
+
+README.md        - Visão geral do projeto
+
+-------------------------------------------------------------------------------------------------------------------
+
+Segurança:
+
+Por motivos de segurança, todas as chaves e credenciais nos notebooks e scripts foram substituídas ou omitidas. Em ambientes de produção, recomenda-se o uso de Azure Key Vault, variáveis de ambiente ou secrets seguros para gerenciamento de credenciais.
