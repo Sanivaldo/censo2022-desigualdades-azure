@@ -43,7 +43,15 @@
 						"referenceName": "ds_bcb_sgs_raw",
 						"type": "DatasetReference",
 						"parameters": {
-							"seriesCode": "@pipeline().parameters.seriesCode"
+							"seriesCode": "@pipeline().parameters.seriesCode",
+							"dataInicial": {
+								"value": "@pipeline().parameters.dataInicial",
+								"type": "Expression"
+							},
+							"dataFinal": {
+								"value": "@pipeline().parameters.dataFinal",
+								"type": "Expression"
+							}
 						}
 					}
 				],
@@ -60,6 +68,12 @@
 		],
 		"parameters": {
 			"seriesCode": {
+				"type": "string"
+			},
+			"dataInicial": {
+				"type": "string"
+			},
+			"dataFinal": {
 				"type": "string"
 			}
 		},
