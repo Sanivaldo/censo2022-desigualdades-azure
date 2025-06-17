@@ -7,3 +7,6 @@ terraform.tfvars
 terraform.tfvars.json
 override.tf
 override.tf.json
+
+# Linked Services do ADF
+linkedService/*.json
