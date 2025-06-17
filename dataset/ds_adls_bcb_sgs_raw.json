@@ -1,10 +1,6 @@
 {
 	"name": "ds_adls_bcb_sgs_raw",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "LS_adls_gen2",
-			"type": "LinkedServiceReference"
-		},
 		"parameters": {
 			"seriesCode": {
 				"type": "string"
