@@ -47,7 +47,8 @@
 						"referenceName": "ds_adls_bcb_sgs_raw",
 						"type": "DatasetReference",
 						"parameters": {
-							"seriesCode": "raw/@{pipeline().parameters.seriesCode}/@{formatDateTime(utcNow(),'yyyy-MM-dd')}.json"
+							"seriesCode": "bcdata.sgs.11",
+							"fileName": "concat('series_', pipeline().parameters.seriesCode, '_', formatDateTime(utcNow(), 'yyyyMMdd'), '.json')"
 						}
 					}
 				]
