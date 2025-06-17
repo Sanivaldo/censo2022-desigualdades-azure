@@ -5,17 +5,23 @@
 		"factoryName": {
 			"value": "adf-censo-data-pipelines-2025"
 		},
+		"LS_adls_gen2_accountKey": {
+			"value": ""
+		},
 		"ls_adls_censo_accountKey": {
 			"value": ""
+		},
+		"LS_adls_gen2_properties_typeProperties_url": {
+			"value": "https://stcensodados.dfs.core.windows.net/"
 		},
 		"ls_adls_censo_properties_typeProperties_url": {
 			"value": "https://stcensodados.dfs.core.windows.net/"
 		},
+		"ls_bcb_sgs_http_properties_typeProperties_url": {
+			"value": "https://api.bcb.gov.br"
+		},
 		"ls_ibge_sidra_http_properties_typeProperties_url": {
 			"value": "https://sidra.ibge.gov.br/"
-		},
-		"ls_bcb_sgs_http_properties_typeProperties_url": {
-			"value": "https://api.bcb.gov.br/"
 		}
 	}
 }

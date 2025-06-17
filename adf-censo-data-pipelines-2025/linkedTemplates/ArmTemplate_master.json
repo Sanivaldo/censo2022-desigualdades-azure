@@ -7,21 +7,29 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adf-censo-data-pipelines-2025"
 		},
+		"LS_adls_gen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_adls_gen2'"
+		},
 		"ls_adls_censo_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_adls_censo'"
+		},
+		"LS_adls_gen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://stcensodados.dfs.core.windows.net/"
 		},
 		"ls_adls_censo_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://stcensodados.dfs.core.windows.net/"
 		},
+		"ls_bcb_sgs_http_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.bcb.gov.br"
+		},
 		"ls_ibge_sidra_http_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://sidra.ibge.gov.br/"
-		},
-		"ls_bcb_sgs_http_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://api.bcb.gov.br/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -50,17 +58,23 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"LS_adls_gen2_accountKey": {
+						"value": "[parameters('LS_adls_gen2_accountKey')]"
+					},
 					"ls_adls_censo_accountKey": {
 						"value": "[parameters('ls_adls_censo_accountKey')]"
+					},
+					"LS_adls_gen2_properties_typeProperties_url": {
+						"value": "[parameters('LS_adls_gen2_properties_typeProperties_url')]"
 					},
 					"ls_adls_censo_properties_typeProperties_url": {
 						"value": "[parameters('ls_adls_censo_properties_typeProperties_url')]"
 					},
-					"ls_ibge_sidra_http_properties_typeProperties_url": {
-						"value": "[parameters('ls_ibge_sidra_http_properties_typeProperties_url')]"
-					},
 					"ls_bcb_sgs_http_properties_typeProperties_url": {
 						"value": "[parameters('ls_bcb_sgs_http_properties_typeProperties_url')]"
+					},
+					"ls_ibge_sidra_http_properties_typeProperties_url": {
+						"value": "[parameters('ls_ibge_sidra_http_properties_typeProperties_url')]"
 					}
 				}
 			},
