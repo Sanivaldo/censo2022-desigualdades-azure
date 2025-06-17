@@ -91,6 +91,11 @@
 A pipeline cobre todo o fluxo: da coleta de dados brutos em APIs e repositórios públicos, passando pela modelagem em camadas (bronze, silver, gold), até a disponibilização em dashboards interativos. Todos os códigos foram versionados no GitHub, e as credenciais sensíveis foram protegidas conforme boas práticas.</p>
     </section>
 
+    <section>
+      <h2>Fluxo da Arquitetura</h2>
+      <p>Diagrama simplificado do pipeline de dados em nuvem com serviços Azure:</p>
+      <img src="https://raw.githubusercontent.com/Sanivaldo/data-engineer-azure-dados-publicos/main/docs/img/diagrama-fluxo-azure.png" alt="Fluxo Arquitetura Azure" style="width:100%; max-width:800px; display:block; margin: 0 auto; border-radius: 8px;">
+    </section>
     
 <section>
   <h2>Sobre Mim</h2>
@@ -127,15 +132,18 @@ A pipeline cobre todo o fluxo: da coleta de dados brutos em APIs e repositórios
     </section>
   </main>
 
-<h3>Stack Técnica</h3>
-<ul>
-  <li>💻 Linguagens: Python, SQL, DAX</li>
-  <li>☁️ Cloud: Microsoft Azure (Data Factory, Synapse, Data Lake Gen2, SQL DB)</li>
-  <li>📈 BI: Power BI</li>
-  <li>🛠️ Infraestrutura: Terraform (IaC)</li>
-  <li>📊 Processamento: PySpark, Databricks, Synapse Spark</li>
-  <li>🔒 Segurança: Controle de acesso via RBAC e autenticação com Service Principal</li>
-</ul>
+ <section>
+      <h2>Stack Técnica</h2>
+      <ul>
+        <li><strong>💻 Linguagens:</strong> Python, SQL, DAX</li>
+        <li><strong>☁️ Cloud:</strong> Microsoft Azure (Data Factory, Data Lake Gen2, Synapse, SQL Database)</li>
+        <li><strong>📈 Business Intelligence:</strong> Power BI</li>
+        <li><strong>🛠️ Infraestrutura:</strong> Terraform (Infraestrutura como Código)</li>
+        <li><strong>📊 Processamento:</strong> Databricks (PySpark), Synapse Spark</li>
+        <li><strong>🔐 Segurança:</strong> RBAC, autenticação com Service Principal, GitHub Secrets</li>
+        <li><strong>📁 Versionamento:</strong> GitHub (repositório com código de IaC, pipelines e notebooks)</li>
+      </ul>
+    </section>
  
   <footer>
     &copy; 2025 Samuel Calado. Todos os direitos reservados.
