@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-censo-data-pipelines-2025"
+		},
+		"adls_gen_linked_service_accountKey": {
+			"value": ""
+		},
+		"adls_gen_linked_service_properties_typeProperties_url": {
+			"value": "https://stcensodados.dfs.core.windows.net/"
+		},
+		"bcb_linked_service_http_properties_typeProperties_url": {
+			"value": "https://api.bcb.gov.br"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
