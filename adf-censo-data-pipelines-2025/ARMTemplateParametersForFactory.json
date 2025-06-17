@@ -12,7 +12,7 @@
 			"value": "https://stcensodados.dfs.core.windows.net/"
 		},
 		"bcb_linked_service_http_properties_typeProperties_url": {
-			"value": "https://api.bcb.gov.br/dados/serie/"
+			"value": "https://api.bcb.gov.br/"
 		}
 	}
 }
